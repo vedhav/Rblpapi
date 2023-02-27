@@ -174,20 +174,20 @@ BEGIN_RCPP
 END_RCPP
 }
 // getBars_Impl
-Rcpp::DataFrame getBars_Impl(SEXP con, std::string security, std::string eventType, int barInterval, std::string startDateTime, std::string endDateTime, Rcpp::Nullable<Rcpp::CharacterVector> options, bool verbose);
-RcppExport SEXP _Rblpapi_getBars_Impl(SEXP conSEXP, SEXP securitySEXP, SEXP eventTypeSEXP, SEXP barIntervalSEXP, SEXP startDateTimeSEXP, SEXP endDateTimeSEXP, SEXP optionsSEXP, SEXP verboseSEXP) {
+Rcpp::DataFrame getBars_Impl(SEXP con, SEXP identity_, std::string security, std::string eventType, int barInterval, std::string startDateTime, std::string endDateTime, Rcpp::Nullable<Rcpp::CharacterVector> options);
+RcppExport SEXP _Rblpapi_getBars_Impl(SEXP conSEXP, SEXP identity_SEXP, SEXP securitySEXP, SEXP eventTypeSEXP, SEXP barIntervalSEXP, SEXP startDateTimeSEXP, SEXP endDateTimeSEXP, SEXP optionsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type con(conSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type identity_(identity_SEXP);
     Rcpp::traits::input_parameter< std::string >::type security(securitySEXP);
     Rcpp::traits::input_parameter< std::string >::type eventType(eventTypeSEXP);
     Rcpp::traits::input_parameter< int >::type barInterval(barIntervalSEXP);
     Rcpp::traits::input_parameter< std::string >::type startDateTime(startDateTimeSEXP);
     Rcpp::traits::input_parameter< std::string >::type endDateTime(endDateTimeSEXP);
     Rcpp::traits::input_parameter< Rcpp::Nullable<Rcpp::CharacterVector> >::type options(optionsSEXP);
-    Rcpp::traits::input_parameter< bool >::type verbose(verboseSEXP);
-    rcpp_result_gen = Rcpp::wrap(getBars_Impl(con, security, eventType, barInterval, startDateTime, endDateTime, options, verbose));
+    rcpp_result_gen = Rcpp::wrap(getBars_Impl(con, identity_, security, eventType, barInterval, startDateTime, endDateTime, options));
     return rcpp_result_gen;
 END_RCPP
 }

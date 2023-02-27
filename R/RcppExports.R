@@ -67,8 +67,8 @@ fieldSearch_Impl <- function(con, searchterm) {
     .Call(`_Rblpapi_fieldSearch_Impl`, con, searchterm)
 }
 
-getBars_Impl <- function(con, security, eventType, barInterval, startDateTime, endDateTime, options, verbose = FALSE) {
-    .Call(`_Rblpapi_getBars_Impl`, con, security, eventType, barInterval, startDateTime, endDateTime, options, verbose)
+getBars_Impl <- function(con, identity_, security, eventType, barInterval, startDateTime, endDateTime, options) {
+    .Call(`_Rblpapi_getBars_Impl`, con, identity_, security, eventType, barInterval, startDateTime, endDateTime, options)
 }
 
 fieldInfo_Impl <- function(con_, fields) {
